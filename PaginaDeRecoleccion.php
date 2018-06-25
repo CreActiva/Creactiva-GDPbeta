@@ -91,7 +91,7 @@
                 .ia: información adicional
                 #BS: Boton safe
             --->
-                        <textarea maxlength="210" type="text" class="form-control mb-3" placeholder="Información Adicional" Name="IA1" class="ia1" required></textarea>
+                        <textarea maxlength="210" type="text" class="ia1 form-control mb-3" placeholder="Información Adicional" Name="IA1"  required></textarea>
                     </div>
                     
                     <div id="despues"></div>

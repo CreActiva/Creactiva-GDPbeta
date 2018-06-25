@@ -7,9 +7,9 @@ $(document).ready(function () {
             var num = parseInt($Informacion.prop("class").match(/\d/g)) + 1;
             var $klonInfo = $Informacion.clone().attr({
                 name: 'IA' + num,
-                class: 'ia' + num
+                class: 'ia' + num + ' form-control mb-3'
             });
-            $Informacion.after($klonInfo.text('IA' + num));
+            $Informacion.after($klonInfo.text(''));
             contInfo++
         } else {
             alert("Límite excedido");
