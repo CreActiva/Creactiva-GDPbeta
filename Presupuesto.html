@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Presupuesto</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src="js/Html2Canvas0.4.1.js"></script>
+    <script type="text/javascript" src="js/jspdf.debug.js"></script>
+
+</head>
+
+
+<body>
+    <!--
+        El header se divide en tres partes:
+        • #CodBar: Código de barra.
+        • #Tit: Título.
+        • #ConSide: Zona de Contacto.
+    --->
+
+    <header>
+        <div id="CodBar">
+            <aside id="img"><img src="image/220px-EAN13.png" alt="Codigo de Barras" class="img1"></aside>
+        </div>
+
+        <div id="Tit">
+            <h2>Presupuesto</h2>
+            <!---F=Fecha-->
+            <p>FECHA: <span id="Fecha">25/10/3000</span></p>
+        </div>
+
+        <div id="ConSide">
+
+            <div id="C1">
+                <aside><img src="image/tlf.png" alt="" style="width: 7%;"></aside><p>+58-0414-155-74-01</p>
+
+            </div>
+
+            <div id="C2">
+                <aside><img src="image/mundo.png" alt="" style="width: 12%;"></aside>
+                <p>https://soycreactivo.com/</p>
+            </div>
+            <div id="Mail">
+                <aside><img src="image/buzon.png" alt="" style="width: 15%;"></aside>
+                <p>proyectoscreactiva@gmail.com</p>
+            </div>
+
+        </div>
+    </header>
+
+    <!--
+        El content contiene estos elementos:
+        • IC: Información del cliente
+        • DC: Data central TABLA
+    --->
+
+    <content>
+        <!--
+            Información del Cliente Area
+        --->
+        <div id="IC">
+                <div id="IC1">
+                    <h3><span class="N">Información para el cliente</span></h3>
+                    <!--Nombre De Cliente--->
+                    <h2 id="Name">Lorem Ipsum.</h2>
+                    <!--Nombre de Proyecto--->
+                    <h2 id="NP">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                </div>
+
+                <!--Logo Seccion Información del cliente--->
+                <div id="ICL">
+                    <aside><img src="image/CreActivaLogo.png" alt="LogoCreactiva"></aside>
+                </div>
+        </div>
+
+
+        <!--
+            Data Central Area
+        -->
+        <!--
+        #S = Separador /*width*/
+        #C = Contenedor dentro /*padding*/
+        --->
+        <div id="Title">
+           <div id="S"></div>
+            <div id="TitleT1">
+                <div id="C">
+                    <h2 class="N">Nombre de Trabajo</h2>
+                </div>
+            </div>
+
+
+            <div id="TitleT2">
+                <div id="C">
+                    <h2 class="N">Descripción de Trabajo</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+        <div id="DC">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam incidunt voluptates, ea suscipit non delectus, magni ratione eveniet repudiandae aliquam quaerat. Nihil eveniet autem atque explicabo exercitationem, excepturi, illo.</h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam rem sequi, dolorem doloremque quas, eveniet nam dolore iure, maiores illum laudantium cupiditate repellat velit recusandae cum odit omnis blanditiis.
+                    Porro quam asperiores quos maiores explicabo, velit error quo, magnam facilis, sapiente sint aliquam doloremque ad reiciendis eum placeat. Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+        <div id="DC">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam incidunt voluptates, ea suscipit non delectus, magni ratione eveniet repudiandae aliquam quaerat. Nihil eveniet autem atque explicabo exercitationem, excepturi, illo.</h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam rem sequi, dolorem doloremque quas, eveniet nam dolore iure, maiores illum laudantium cupiditate repellat velit recusandae cum odit omnis blanditiis.
+                    Porro quam asperiores quos maiores explicabo, velit error quo, magnam facilis, sapiente sint aliquam doloremque ad reiciendis eum placeat. Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+        <div id="DC">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam incidunt voluptates, ea suscipit non delectus, magni ratione eveniet repudiandae aliquam quaerat. Nihil eveniet autem atque explicabo exercitationem, excepturi, illo.</h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam rem sequi, dolorem doloremque quas, eveniet nam dolore iure, maiores illum laudantium cupiditate repellat velit recusandae cum odit omnis blanditiis.
+                    Porro quam asperiores quos maiores explicabo, velit error quo, magnam facilis, sapiente sint aliquam doloremque ad reiciendis eum placeat. Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+        <div id="DC">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam incidunt voluptates, ea suscipit non delectus, magni ratione eveniet repudiandae aliquam quaerat. Nihil eveniet autem atque explicabo exercitationem, excepturi, illo.</h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam rem sequi, dolorem doloremque quas, eveniet nam dolore iure, maiores illum laudantium cupiditate repellat velit recusandae cum odit omnis blanditiis.
+                    Porro quam asperiores quos maiores explicabo, velit error quo, magnam facilis, sapiente sint aliquam doloremque ad reiciendis eum placeat. Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+        <div id="DC">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam incidunt voluptates, ea suscipit non delectus, magni ratione eveniet repudiandae aliquam quaerat. Nihil eveniet autem atque explicabo exercitationem, excepturi, illo.</h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam rem sequi, dolorem doloremque quas, eveniet nam dolore iure, maiores illum laudantium cupiditate repellat velit recusandae cum odit omnis blanditiis. Porro quam asperiores quos maiores explicabo, velit error quo, magnam facilis, sapiente sint aliquam doloremque ad reiciendis eum placeat. Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+        <div id="DC">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam incidunt voluptates, ea suscipit non delectus, magni ratione eveniet repudiandae aliquam quaerat. Nihil eveniet autem atque explicabo exercitationem, excepturi, illo.</h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam rem sequi, dolorem doloremque quas, eveniet nam dolore iure, maiores illum laudantium cupiditate repellat velit recusandae cum odit omnis blanditiis.
+                    Porro quam asperiores quos maiores explicabo, velit error quo, magnam facilis, sapiente sint aliquam doloremque ad reiciendis eum placeat. Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.Quod corrupti voluptatibus animi ut assumenda, sapiente sunt amet quo eos.</h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+
+
+    </content>
+
+    <!--
+        El footer se divide en tres partes:
+        • #Mas: Leer Más.
+        • #Bal: Balance total area.
+        • IA: Información Adicional
+    --->
+
+    <footer>
+        <div id="IA">
+        <h3>Información Adicional</h3>
+        <!--6 listas desordenadas--->
+        <ul>
+           <!--
+           ia = información adicional 
+           --->
+           <!--207 caracteres--->
+            <li class="ia">Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh.  Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsun.</li>
+            <li class="ia">Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh.  Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsun.</li>
+        </ul>
+        </div>
+        <div id="Mas">
+            <p>Puedes contactarnos a través de <span class="N">proyectoscreactiva@gmail.com</span></p>
+        </div>
+        <!---
+           BT = Balance total
+        --->
+          
+        <div id="Bal">
+            <h2>Balance Total: <span class="BT">XXXXXX</span></h2>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/impresion.js"></script>
+    <script defer src="js/fontawesome5.0.10/svg-with-js/js/fontawesome-all.min.js"></script>
+</body>
+
+
+</html>
+<!-- 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates qui accusantium porro nemo minus quos? Vel libero quia, repellat quibusdam modi beatae! Ipsum laudantium sed distinctio, quas et, culpa.
+
+--->

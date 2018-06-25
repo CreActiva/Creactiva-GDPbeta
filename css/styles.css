@@ -1,0 +1,354 @@
+@import url(reset.css);
+/*********************/
+
+/*
+@font-face{
+    font-family:'Helvetica';
+    src: url(Typography/Helvetica/HelveticaNeueLTStd Lt.otf);
+}
+*/
+
+* {
+    font-family: 'Helvetica', sans-serif;
+}
+/*Color Naranja Clase*/
+.N {
+    color:#d5845c;
+}
+
+/******************Header Area Styles******************/
+
+header {
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 100px;
+}
+
+/*Codigo de barra*/
+
+#CodBar {
+    display: block;
+    float: left;
+    position: relative;
+    width: 15%;
+    height: 100px;
+}
+
+.img1 {
+    width: 90%;
+    height: 100px
+}
+
+/**/
+
+/*Título*/
+
+#Tit {
+    display: block;
+    float: left;
+    position: relative;
+    box-sizing: content-box;
+    width: 17%;
+    /*width: 25%;*/
+    height: 100px;
+}
+
+#Tit h2 {
+    color: #d5845c;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 25px 10px 10px 0px;
+    /*font-weight: bold;*/
+    height: 20px;
+}
+
+#Tit p {
+    padding: 0;
+    height: 45px;
+    font-size: 18px;
+}
+
+/**/
+
+/*Area contacto*/
+
+#ConSide {
+    width: 68%;
+    /*width: 60%;*/
+    display: block;
+    float: left;
+    position: relative;
+    box-sizing: content-box;
+    background: #d56736;
+    color: #ffffff;
+    height: 100px;
+    box-shadow: inset -1px -1px 10px rgba(0, 0, 0, 0.3215686274509804);
+}
+
+aside{
+    display: inline;
+}
+
+#ConSide #Mail,
+#ConSide #C1,
+#ConSide #C2 {
+    float: left;
+    padding: 30px 5px;
+    display: block;
+    width: 32%;
+    height: 40px;
+    position: relative;
+}
+
+
+#ConSide .ico {
+    width: 10%;
+    float: left;
+    padding-right: 10px;
+}
+
+#ConSide p {
+    padding: 6px 0;
+    font-size: 16px;
+    display: inline;
+
+}
+
+/**/
+
+/************************************/
+
+/******************Content Area Styles******************/
+
+/*Elemento Padre Estilos*/
+
+content {
+    width: 100%;
+    display: block;
+    position: relative;
+    /*height: 718px;*/
+    height: 1340px;
+}
+
+/**/
+
+/*Información de Cliente Styles*/
+
+#IC {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 20px 0 0 0;
+    height: 150px;
+}
+
+#IC1 {
+    padding: 40px 40px;
+    line-height: 25px;
+    float: left;
+}
+
+#IC1 h3 {
+    font-size: 24px;
+}
+
+#IC1 h2 {
+    font-size: 22px;
+}
+
+/**/
+
+/*Información de Clientes Logo Styles*/
+
+#ICL img {
+    width: 10%;
+    float: right;
+    padding: 0 20px 0 0;
+}
+
+/**/
+
+/*Data central Tabla Sección*/
+#Title {
+    width: 100%;
+    position: relative;
+    display: block;
+    height: 60px;
+    float: left;
+    font-size: 26px;
+    text-align: justify;
+}
+
+#DC {
+    width: 100%;
+    position: relative;
+    display: block;
+    height: 220px;
+    float: left;
+    font-size: 22px;
+    text-align: justify;
+
+}
+
+#TitleT1 {
+    width: 30%;
+    position: relative;
+    display: block;
+    height: 60px;
+    float: left;
+    border-bottom: solid 1px #4f4f4f;
+}
+
+#NDT {
+    width: 30%;
+    position: relative;
+    display: block;
+    height: 220px;
+    float: left;
+    border-bottom: solid 1px #4f4f4f;
+}
+
+#TitleT2 {
+    width: 60%;
+    position: relative;
+    display: block;
+    height: 60px;
+    float: left;
+    border-bottom: solid 1px #4f4f4f;
+
+}
+
+#DT {
+    width: 60%;
+    position: relative;
+    display: block;
+    height: 220px;
+    float: left;
+    border-bottom: solid 1px #4f4f4f;
+}
+
+#C {
+    padding:12px;
+}
+#S {
+    float: left;
+    width:5%;
+    height: 220px;
+    position: relative;
+    display: block;
+
+}
+
+/**/
+
+/*Información Adicional*/
+#IA {
+    padding: 40px;
+}
+
+#IA h3{
+    padding: 0 0 20px 12px;
+    font-size: 24px;
+    color:#d5845c;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+    text-align: justify;
+    font-size: 22px;
+}
+/**/
+
+/************************************/
+
+/******************Footer Area Styles******************/
+
+/*Elemento Padre Estilos*/
+
+footer {
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 100px;
+}
+
+/**/
+
+/*Area de Contáctanos*/
+
+#Mas {
+    width: 60%;
+    height: 100px;
+    position: relative;
+    float: left;
+}
+
+#Mas p {
+    padding: 42px 20px;
+    height: 16px;
+}
+
+/**/
+
+/*Balance Area Styles*/
+
+#Bal {
+    width: 40%;
+    height: 100px;
+    position: relative;
+    background: #d56736;
+    box-shadow: inset 2px 3px 10px rgba(0, 0, 0, 0.3215686274509804);
+    float: left;
+    color: #ffffff;
+}
+
+#Bal h2 {
+    padding: 42px 60px;
+    height: 16px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+/**/
+
+/************************************/
+
+/**
+Tabla styles
+table {
+    margin: 5px 65.5px 5px 65.5px;
+    float: left;
+}
+
+caption,
+th,
+td {
+    border-bottom: 1px solid #ddd;
+
+    padding: 12px;
+    text-align: justify;
+    font-size:22px;
+}
+
+td h4 {
+    font-size:22px;
+    display: inline;
+}
+
+.TitleTab {
+    color: #d4683a;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#Derecha { }
+
+**/
