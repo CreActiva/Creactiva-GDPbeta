@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="text-center text-danger">Generar Presupuesto</h1>
+                <h1 class="text-center text-primary">Generar Presupuesto</h1>
             </div>
 
             <div class="w-100"></div>
@@ -29,7 +29,7 @@
     --->
                 <form action="PaginaDeImpresion.php" method="POST">
                     <div class="from-group mt-5">
-                        <h3>Ingresar Fecha.</h3>
+                        <h3>Ingresar Fecha</h3>
                         <!--
                 #Fecha
             --->
@@ -40,47 +40,47 @@
                     </div>
 
                     <div class="from-group mt-4">
-                        <h3>Coloque el nombre del cliente que poseerá este presupuesto.</h3>
+                        <h3>Nombre de Cliente</h3>
 
                         <!--
                 #NC: Nombre Del Cliente
             --->
-                        <input maxlength="95" type="text" class="form-control" placeholder="Nombre de cliente" Name="NC" id="NC " required>
+                        <input maxlength="95" type="text" class="form-control" placeholder="Nombre" Name="NC" id="NC " required>
                     </div>
 
                     <div class="from-group mt-4">
-                        <h3>¿Cuál es el nombre del proyecto que desea colocar en el presupuesto?</h3>
+                        <h3>Nombre del proyecto</h3>
 
                         <!--
                 #NP:Nombre del Proyecto
             --->
                         <input maxlength="95" type="text" class="form-control" placeholder="Nombre de proyecto" Name="NP" id="NP" required>
                     </div>
-                    <h2 class="mt-5 text-danger">Datos del trabajo realizado</h2>
+                    <h2 class="mt-5 text-primary">Datos del trabajo realizado</h2>
 
                     <div id="DatosTabla">
                         <div class="from-group mt-4">
-                            <h3>Nombre del dato.</h3>
+                            <h3>Nombre del dato</h3>
                             <!--
                 <h6>Nota: ingrese esta etiqueta "br/" entre estas comillas españolas "<>". si desea hacer un salto de linea por favor no agreguen mas de 5-6 saltos.</h6>
                 --->
                             <!--
                     #NDT: Nombre del dato de trabajo
-                --->
-                            <textarea maxlength="240" type="text" class="form-control" placeholder="Dato del trabajo" Name="NDT" id="NDT" required></textarea>
+                --->        
+                            <textarea maxlength="240" type="text" class="form-control mb-3" placeholder="Dato del trabajo1" Name="NDT1" id="NDT1" required></textarea>
                         </div>
 
                         <div class="from-group mt-4">
-                            <h3>Desarrollo de descripción de dato realizado.</h3>
+                            <h3>Desarrollo de descripción de dato realizado</h3>
                             <!--
                     #DT: Dato del trabajo
                 --->
-                            <textarea maxlength="550" type="text" class="form-control mb-3" placeholder="Descripción" Name="DT" id="DT" required></textarea>
+                            <textarea maxlength="550" type="text" class="form-control mb-3" placeholder="Descripción1" Name="DT1" id="DT1" required></textarea>
                         </div>
                     </div>
                     <div id="Despues"></div>
 
-                    <button id="MasDatos" type="button" class="btn btn-outline-danger">Agregar más datos del trabajo</button>
+                    <button id="MasDatos" type="button" class="btn btn-outline-primary">Agregar más datos del trabajo</button>
 
 
 
@@ -95,7 +95,7 @@
                     </div>
                     
                     <div id="despues"></div>
-                    <button id="MasInformacion" type="button" class="btn btn-outline-danger">Agregar más información</button>
+                    <button id="MasInformacion" type="button" class="btn btn-outline-primary">Agregar más información</button>
                     <div class="w-100"></div>
 
                     <div class="from-group mt-4">
@@ -107,7 +107,7 @@
                         <input maxlength="20" type="number" class="form-control-sm mb-3" placeholder="XXXX" Name="BT" class="BT" required>
                     </div>
 
-                    <input type="submit" class="btn btn-danger mt-4" name="submit" id="BS" value="Clickqueame al finalizar">
+                    <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickqueame al finalizar">
                 </form>
             </div>
 

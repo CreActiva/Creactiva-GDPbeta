@@ -16,9 +16,9 @@
 $Fecha = $_POST["Fecha"];
 $NombreCliente = $_POST["NC"];
 $NombreProyecto = $_POST["NP"];
-$NombreDatoTrabajo = $_POST["NDT"];
-$DatoTrabajo = $_POST["DT"];
-$InfoAdicional = $_POST["IA"];
+$NombreDatoTrabajo = $_POST["NDT1"];
+$DatoTrabajo = $_POST["DT1"];
+$InfoAdicional = $_POST["IA1"];
 $BalanceTotal = $_POST["BT"];
 
 ?>
