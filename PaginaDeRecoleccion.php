@@ -82,6 +82,7 @@
 
                     <button id="MasDatos" type="button" class="btn btn-outline-primary">Agregar más datos del trabajo</button>
 
+                    <button id="MenosDatos" type="button" class="btn btn-outline-danger">Eliminar datos</button>
 
 
                     <div id="Informacion" class="from-group mt-4">
@@ -96,6 +97,7 @@
                     
                     <div id="despues"></div>
                     <button id="MasInformacion" type="button" class="btn btn-outline-primary">Agregar más información</button>
+                    <button id="MenosInfo" type="button" class="btn btn-outline-danger">Eliminar información</button>
                     <div class="w-100"></div>
 
                     <div class="from-group mt-4">
@@ -107,7 +109,8 @@
                         <input maxlength="20" type="number" class="form-control-sm mb-3" placeholder="XXXX" Name="BT" class="BT" required>
                     </div>
 
-                    <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickqueame al finalizar">
+                    <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickear para generar presupuesto">
+
                 </form>
             </div>
 

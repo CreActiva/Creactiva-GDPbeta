@@ -30,7 +30,17 @@ $(document).ready(function () {
         }
     });
     
+    $('#MenosInfo').click(function(){
+        if (contInfo > 1){
+            $('textarea[class^="ia"]:last').remove();
+            contInfo--;
+        } else {
+            alert('Límite de reducción excedido');
+        }
+    });
+
 });
+
 
 
 
@@ -61,6 +71,16 @@ $(document).ready(function () {
             contMasInfo++;
         } else {
             alert("Límite excedido");
+        }
+    });
+
+    $("#MenosDatos").click(function(){
+        if(contMasInfo > 1){
+            $('textarea[id ^= "NDT"]:last').remove();
+            $('textarea[id ^= "DT"]:last').remove();
+            contMasInfo--;
+        } else{
+            alert('Límite de reducción excedido');
         }
     });
 });
