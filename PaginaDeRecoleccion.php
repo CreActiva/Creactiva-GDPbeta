@@ -106,7 +106,8 @@
                         <!--
                 BT: Balance TOtal
             --->
-                        <input maxlength="20" type="number" class="form-control-sm mb-3" placeholder="XXXX" Name="BT" class="BT" required>
+                        <input maxlength="20" type="number" class="form-control-sm mb-3" placeholder="XXXX" Name="BT" id="BT" required onKeyDown="Contar()" onKeyUp="Contar()">
+                        <input type="text" id="Cont" value="10" disabled>
                     </div>
 
                     <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickear para generar presupuesto">

@@ -1,5 +1,4 @@
 /*Duplicador de textarea "Información adicional"*/
-
 var contInfo = 1;
 $(document).ready(function () {
     
@@ -32,6 +31,7 @@ $(document).ready(function () {
     
     $('#MenosInfo').click(function(){
         if (contInfo > 1){
+            //Remueve la class que seleccioné y le resta al contador del inputs
             $('textarea[class^="ia"]:last').remove();
             contInfo--;
         } else {
@@ -40,9 +40,6 @@ $(document).ready(function () {
     });
 
 });
-
-
-
 
 /*Duplicador de textarea "Datos del trabajo realizado"*/
 var contMasInfo = 1;
@@ -85,3 +82,14 @@ $(document).ready(function () {
     });
 });
 
+/*Limitador de caracteres en input numérico*/
+function Contar(){
+    var max = 10;
+    var cadena = document.getElementById("BT").value;
+    var i = cadena.length;
+    if (i <= max) {
+        document.getElementById("Cont").value = max - i;
+    } else {
+        document.getElementById("BT").value = cadena.substr(0, max);
+    }
+}
