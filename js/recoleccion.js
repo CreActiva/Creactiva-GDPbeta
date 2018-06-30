@@ -1,5 +1,4 @@
 /*Duplicador de textarea "Información adicional"*/
-
 var contInfo = 1;
 $(document).ready(function () {
     
@@ -30,10 +29,17 @@ $(document).ready(function () {
         }
     });
     
+    $('#MenosInfo').click(function(){
+        if (contInfo > 1){
+            //Remueve la class que seleccioné y le resta al contador del inputs
+            $('textarea[class^="ia"]:last').remove();
+            contInfo--;
+        } else {
+            alert('Límite de reducción excedido');
+        }
+    });
+
 });
-
-
-
 
 /*Duplicador de textarea "Datos del trabajo realizado"*/
 var contMasInfo = 1;
@@ -64,4 +70,26 @@ $(document).ready(function () {
             alert("Límite excedido");
         }
     });
+
+    $("#MenosDatos").click(function(){
+        if(contMasInfo > 1){
+            $('textarea[id ^= "NDT"]:last').remove();
+            $('textarea[id ^= "DT"]:last').remove();
+            contMasInfo--;
+        } else{
+            alert('Límite de reducción excedido');
+        }
+    });
 });
+
+/*Limitador de caracteres en input numérico*/
+function Contar(){
+    var max = 15;
+    var cadena = document.getElementById("BT").value;
+    var i = cadena.length;
+    if (i <= max) {
+        document.getElementById("Cont").value = max - i;
+    } else {
+        document.getElementById("BT").value = cadena.substr(0, max);
+    }
+}
