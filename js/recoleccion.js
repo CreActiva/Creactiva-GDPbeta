@@ -84,7 +84,7 @@ $(document).ready(function () {
 
 /*Limitador de caracteres en input numérico*/
 function Contar(){
-    var max = 10;
+    var max = 15;
     var cadena = document.getElementById("BT").value;
     var i = cadena.length;
     if (i <= max) {
