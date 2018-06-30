@@ -16,9 +16,20 @@
 $Fecha = $_POST["Fecha"];
 $NombreCliente = $_POST["NC"];
 $NombreProyecto = $_POST["NP"];
-$NombreDatoTrabajo = $_POST["NDT1"];
-$DatoTrabajo = $_POST["DT1"];
-$InfoAdicional = $_POST["IA1"];
+    
+#$NombreDatoTrabajo = $_POST["NDT1"];
+#$DatoTrabajo = $_POST["DT1"];
+#$InfoAdicional = $_POST["IA1"];
+
+$NombreDatoTrabajo = array($_POST["NDT1"],$_POST["NDT2"],$_POST["NDT3"],$_POST["NDT4"],$_POST["NDT5"]);
+$DatoTrabajo = array($_POST["DT1"],$_POST["DT2"],$_POST["DT3"],$_POST["DT4"],$_POST["DT5"]);    
+$InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"],$_POST["IA4"],);
+
+if (isset($NombreDatoTrabajo[2]) == (false)) {
+    $NombreDatoTrabajo[2]
+    $DatoTrabajo[2]
+}
+    
 $BalanceTotal = $_POST["BT"];
 $Moneda = $_POST["Moneda"];
 
@@ -116,14 +127,14 @@ $Moneda = $_POST["Moneda"];
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo}"?></h2>
+                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[0]}"?></h2>
                 </div>
             </div>
 
 
             <div id="DT">
                 <div id="C">
-                    <h2><?php echo"{$DatoTrabajo}"?>
+                    <h2><?php echo"{$DatoTrabajo[0]}"?>
                     </h2>
                 </div>
             </div>
@@ -134,14 +145,14 @@ $Moneda = $_POST["Moneda"];
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo}"?></h2>
+                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[1]}"?></h2>
                 </div>
             </div>
 
 
             <div id="DT">
                 <div id="C">
-                    <h2><?php echo"{$DatoTrabajo}"?>
+                    <h2><?php echo"{$DatoTrabajo[1]}"?>
                     </h2>
                 </div>
             </div>
@@ -152,14 +163,14 @@ $Moneda = $_POST["Moneda"];
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo}"?></h2>
+                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[2]}"?></h2>
                 </div>
             </div>
 
 
             <div id="DT">
                 <div id="C">
-                    <h2><?php echo"{$DatoTrabajo}"?>
+                    <h2><?php echo"{$DatoTrabajo[2]}"?>
                     </h2>
                 </div>
             </div>
@@ -170,14 +181,14 @@ $Moneda = $_POST["Moneda"];
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo}"?></h2>
+                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[3]}"?></h2>
                 </div>
             </div>
 
 
             <div id="DT">
                 <div id="C">
-                    <h2><?php echo"{$DatoTrabajo}"?>
+                    <h2><?php echo"{$DatoTrabajo[3]}"?>
                     </h2>
                 </div>
             </div>
@@ -188,14 +199,14 @@ $Moneda = $_POST["Moneda"];
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo}"?></h2>
+                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[4]}"?></h2>
                 </div>
             </div>
 
 
             <div id="DT">
                 <div id="C">
-                    <h2><?php echo"{$DatoTrabajo}"?> </h2>
+                    <h2><?php echo"{$DatoTrabajo[4]}"?> </h2>
                 </div>
             </div>
             <div id="S"></div>
@@ -222,8 +233,10 @@ $Moneda = $_POST["Moneda"];
            ia = información adicional 
            --->
            <!--207 caracteres--->
-            <li class="ia"><?php echo "{$InfoAdicional}"?></li>
-            <li class="ia"><?php echo "{$InfoAdicional}"?></li>
+            <li class="ia"><?php echo "{$InfoAdicional[0]}"?></li>
+            <li class="ia"><?php echo "{$InfoAdicional[1]}"?></li>
+            <li class="ia"><?php echo "{$InfoAdicional[2]}"?></li>
+            <li class="ia"><?php echo "{$InfoAdicional[3]}"?></li>
         </ul>
         </div>
         <div id="Mas">
@@ -234,7 +247,7 @@ $Moneda = $_POST["Moneda"];
         --->
           
         <div id="Bal">
-            <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}{$Moneda }"?></span></h2>
+            <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}{$Moneda}"?></span></h2>
         </div>
     </footer>
     <script type="text/javascript" src="js/impresion.js"></script>
