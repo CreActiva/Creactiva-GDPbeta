@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -66,7 +66,7 @@
                 --->
                             <!--
                     #NDT: Nombre del dato de trabajo
-                --->        
+                --->
                             <textarea maxlength="240" type="text" class="form-control mb-3" placeholder="Dato del trabajo1" Name="NDT1" id="NDT1" required></textarea>
                         </div>
 
@@ -92,9 +92,9 @@
                 .ia: información adicional
                 #BS: Boton safe
             --->
-                        <textarea maxlength="210" type="text" class="ia1 form-control mb-3" placeholder="Información Adicional" Name="IA1"  required></textarea>
+                        <textarea maxlength="210" type="text" class="ia1 form-control mb-3" placeholder="Información Adicional" Name="IA1" required></textarea>
                     </div>
-                    
+
                     <div id="despues"></div>
                     <button id="MasInformacion" type="button" class="btn btn-outline-primary">Agregar más información</button>
                     <button id="MenosInfo" type="button" class="btn btn-outline-danger">Eliminar información</button>
@@ -104,10 +104,27 @@
                         <h3>Ingresar el balance total del presupuesto</h3>
 
                         <!--
-                BT: Balance TOtal
+                BT: Balance Total
             --->
                         <input maxlength="20" type="number" class="form-control-sm mb-3" placeholder="XXXX" Name="BT" id="BT" required onKeyDown="Contar()" onKeyUp="Contar()">
-                        <input type="text" id="Cont" value="15" disabled>
+                        <!-- Contador retroceso de caracteres
+                        <input type="text" id="Cont" value="15" >
+                        -->
+                        <h5>Moneda</h5>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadioInline1">BsF</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadioInline2">BsS</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" required>
+                            <label class="custom-control-label" for="customRadioInline3">Dolar</label>
+                        </div>
                     </div>
 
                     <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickear para generar presupuesto">
