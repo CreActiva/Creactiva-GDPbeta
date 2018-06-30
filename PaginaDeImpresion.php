@@ -20,6 +20,7 @@ $NombreDatoTrabajo = $_POST["NDT1"];
 $DatoTrabajo = $_POST["DT1"];
 $InfoAdicional = $_POST["IA1"];
 $BalanceTotal = $_POST["BT"];
+$Moneda = $_POST["Moneda"];
 
 ?>
 
@@ -233,7 +234,7 @@ $BalanceTotal = $_POST["BT"];
         --->
           
         <div id="Bal">
-            <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}"?></span></h2>
+            <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}{$Moneda }"?></span></h2>
         </div>
     </footer>
     <script type="text/javascript" src="js/impresion.js"></script>

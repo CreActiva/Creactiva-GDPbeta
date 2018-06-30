@@ -111,24 +111,28 @@
                         <input type="text" id="Cont" value="15" >
                         -->
                         <h5>Moneda</h5>
+                        <!--Estructura del label
+                        <label for="element_id">
+                        
+                        --->
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" required>
-                            <label class="custom-control-label" for="customRadioInline1">BsF</label>
+                            <input type="radio" id="BsF" name="Moneda" class="custom-control-input" value = "BsF" required>
+                            <label class="custom-control-label" for="BsF">BsF</label>
                         </div>
 
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" required>
-                            <label class="custom-control-label" for="customRadioInline2">BsS</label>
+                            <input type="radio" id="BsS" name="Moneda" class="custom-control-input"  value = "BsS" required>
+                            <label class="custom-control-label" for="BsS">BsS</label>
                         </div>
 
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" required>
-                            <label class="custom-control-label" for="customRadioInline3">Dolar</label>
+                            <input type="radio" id="Dolar" name="Moneda" class="custom-control-input" value = "$" required>
+                            <label class="custom-control-label" for="Dolar">Dolar</label>
                         </div>
+                        
                     </div>
 
                     <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickear para generar presupuesto">
-
                 </form>
             </div>
 
@@ -144,6 +148,5 @@
     </script>
     <script src="js/recoleccion.js"></script>
 </body>
-
 
 </html>
