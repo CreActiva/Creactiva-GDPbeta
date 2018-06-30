@@ -27,7 +27,7 @@ $InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"],$_POST["IA4"],)
 
 if (isset($NombreDatoTrabajo[2]) == (false)) {
     $NombreDatoTrabajo[2]
-    $DatoTrabajo[2]
+    $DatoTrabajo[2] 
 }
     
 $BalanceTotal = $_POST["BT"];
