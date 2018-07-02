@@ -16,20 +16,58 @@
 $Fecha = $_POST["Fecha"];
 $NombreCliente = $_POST["NC"];
 $NombreProyecto = $_POST["NP"];
-    
-#$NombreDatoTrabajo = $_POST["NDT1"];
-#$DatoTrabajo = $_POST["DT1"];
-#$InfoAdicional = $_POST["IA1"];
 
 $NombreDatoTrabajo = array($_POST["NDT1"],$_POST["NDT2"],$_POST["NDT3"],$_POST["NDT4"],$_POST["NDT5"]);
 $DatoTrabajo = array($_POST["DT1"],$_POST["DT2"],$_POST["DT3"],$_POST["DT4"],$_POST["DT5"]);    
 $InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"],$_POST["IA4"],);
 
-if (isset($NombreDatoTrabajo[2]) == (false)) {
-    $NombreDatoTrabajo[2]
-    $DatoTrabajo[2] 
+if (isset($NombreDatoTrabajo[1]) == (false)) {
+    $NombreDatoTrabajo[1] =" ";
+    $DatoTrabajo[1] =" ";
+    $NombreDatoTrabajo[2] =" ";
+    $DatoTrabajo[2] =" ";
+    $NombreDatoTrabajo[3] =" ";
+    $DatoTrabajo[3] =" ";
+    $NombreDatoTrabajo[4] =" ";
+    $DatoTrabajo[4] =" ";
 }
     
+if (isset($NombreDatoTrabajo[2]) == (false)) {
+    $NombreDatoTrabajo[2] =" ";
+    $DatoTrabajo[2] =" ";
+    $NombreDatoTrabajo[3] =" ";
+    $DatoTrabajo[3] =" ";
+    $NombreDatoTrabajo[4] =" ";
+    $DatoTrabajo[4] =" ";
+}
+
+if (isset($NombreDatoTrabajo[3]) == (false)) {
+    $NombreDatoTrabajo[3] =" ";
+    $DatoTrabajo[3] =" ";
+    $NombreDatoTrabajo[4] =" ";
+    $DatoTrabajo[4] =" ";
+}
+    
+if (isset($NombreDatoTrabajo[4]) == (false)) {
+    $NombreDatoTrabajo[4] =" ";
+    $DatoTrabajo[4] =" ";
+}
+
+if (isset($InfoAdicional[1]) == (false)) {
+    $InfoAdicional[1] =" ";
+    $InfoAdicional[2] =" ";
+    $InfoAdicional[3] =" ";
+}
+
+if (isset($InfoAdicional[2]) == (false)) {
+    $InfoAdicional[2] =" ";
+    $InfoAdicional[3] =" ";
+}
+
+if (isset($InfoAdicional[3]) == (false)) {
+    $InfoAdicional[3] =" ";
+}
+
 $BalanceTotal = $_POST["BT"];
 $Moneda = $_POST["Moneda"];
 
