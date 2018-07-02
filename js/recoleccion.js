@@ -15,11 +15,12 @@ $(document).ready(function () {
             var num = parseInt($Informacion.prop("class").match(/\d/g)) + 1;
 
             //el metodo .attr() puede editar los atributos en el html 
+            $("#DelIA"contInfo).remove();
             var $klonInfo = $Informacion.clone().attr({
                 name: 'IA' + num,
                 class: 'ia' + num + ' form-control mb-3'
             });
-
+            
             //el metodo .after() coloca contenido después de elementos seleccionados
             //.text() da un texto por medio de elementos seleccionados
             $Informacion.after($klonInfo.text(''));
@@ -95,3 +96,4 @@ function Contar() {
         document.getElementById("BT").value = cadena.substr(0, max);
     }
 }
+/*MAQUETACION DE IDEA. CUANDO SE DUPLIQUE EL FORMULARIO, SE ELIMINARA LOS ID "Del" correspondiente al nùmero de inputs creados */

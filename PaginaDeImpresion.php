@@ -11,6 +11,8 @@
     <script type="text/javascript" src="js/jspdf.debug.js"></script>
 
 </head>
+
+<body>
 <?php
 
 $Fecha = $_POST["Fecha"];
@@ -72,8 +74,6 @@ $BalanceTotal = $_POST["BT"];
 $Moneda = $_POST["Moneda"];
 
 ?>
-
-<body>
     <!--
         El header se divide en tres partes:
         • #CodBar: Código de barra.
@@ -290,5 +290,3 @@ $Moneda = $_POST["Moneda"];
     </footer>
     <script type="text/javascript" src="js/impresion.js"></script>
 </body>
-
-</html>
