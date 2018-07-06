@@ -21,7 +21,7 @@ $NombreProyecto = $_POST["NP"];
 
 $NombreDatoTrabajo = array($_POST["NDT1"],$_POST["NDT2"],$_POST["NDT3"],$_POST["NDT4"],$_POST["NDT5"]);
 $DatoTrabajo = array($_POST["DT1"],$_POST["DT2"],$_POST["DT3"],$_POST["DT4"],$_POST["DT5"]);    
-$InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"],$_POST["IA4"],);
+$InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"]);
 
 if (isset($NombreDatoTrabajo[1]) == (false)) {
     $NombreDatoTrabajo[1] =" ";
@@ -274,7 +274,6 @@ $Moneda = $_POST["Moneda"];
             <li class="ia"><?php echo "{$InfoAdicional[0]}"?></li>
             <li class="ia"><?php echo "{$InfoAdicional[1]}"?></li>
             <li class="ia"><?php echo "{$InfoAdicional[2]}"?></li>
-            <li class="ia"><?php echo "{$InfoAdicional[3]}"?></li>
         </ul>
         </div>
         <div id="Mas">
@@ -288,5 +287,6 @@ $Moneda = $_POST["Moneda"];
             <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}{$Moneda}"?></span></h2>
         </div>
     </footer>
+    <script src="js/recoleccion.js"></script>
     <script type="text/javascript" src="js/impresion.js"></script>
 </body>

@@ -1,9 +1,11 @@
 /*Duplicador de textarea "Información adicional"*/
 var contInfo = 1;
+var $klonInfo;
 $(document).ready(function () {
 
     $("#MasInformacion").click(function () {
-        if (contInfo <= 3) {
+        if (contInfo < 3) { 
+            contInfo++;
             //Selector class="NC"
             var $Informacion = $('textarea[class^="ia"]:last');
 
@@ -15,16 +17,17 @@ $(document).ready(function () {
             var num = parseInt($Informacion.prop("class").match(/\d/g)) + 1;
 
             //el metodo .attr() puede editar los atributos en el html 
-            $("#DelIA"contInfo).remove();
-            var $klonInfo = $Informacion.clone().attr({
+            $("#DelIA" + contInfo).remove();
+            
+            //val('') edita el value del input
+            $klonInfo = $Informacion.clone().attr({
                 name: 'IA' + num,
                 class: 'ia' + num + ' form-control mb-3'
-            });
+            }).val('');
             
             //el metodo .after() coloca contenido después de elementos seleccionados
-            //.text() da un texto por medio de elementos seleccionados
-            $Informacion.after($klonInfo.text(''));
-            contInfo++;
+            $('header #CodBar').append('<p>Hola<p>');
+            $Informacion.after($klonInfo);
         } else {
             alert("Límite excedido");
         }
@@ -33,7 +36,16 @@ $(document).ready(function () {
     $('#MenosInfo').click(function () {
         if (contInfo > 1) {
             //Remueve la class que seleccioné y le resta al contador del inputs
+            
+            $kloneInfo = $('textarea[name ^= "IA"]:last').clone().attr({
+                name: 'IA' + contInfo,
+                class: 'd-none',
+                id: 'DelIA' + contInfo  
+            }).val('');
+            
             $('textarea[class^="ia"]:last').remove();
+            
+            $('textarea[class^="ia"]:last').after($kloneInfo);
             contInfo--;
         } else {
             alert('Límite de reducción excedido');
@@ -41,6 +53,8 @@ $(document).ready(function () {
     });
 
 });
+
+
 
 /*Duplicador de textarea "Datos del trabajo realizado"*/
 var contMasInfo = 1;
@@ -50,19 +64,20 @@ $(document).ready(function () {
             var $NDT = $('textarea[id ^= "NDT"]:last');
             var $DT = $('textarea[id ^= "DT"]:last');
 
+            $('')
             var NUM = parseInt($NDT.prop("id").match(/\d/g)) + 1;
 
             var $ClonarNDT = $NDT.clone().attr({
                 name: 'NDT' + NUM,
                 id: 'NDT' + NUM,
                 placeholder: 'Dato del trabajo' + NUM
-            });
+            }).val('');
 
             var $ClonarDT = $DT.clone().attr({
                 name: 'DT' + NUM,
                 id: 'DT' + NUM,
                 placeholder: 'Descripción' + NUM
-            });
+            }).val('');
 
             $NDT.after($ClonarNDT.text(''));
             $DT.after($ClonarDT.text(''));

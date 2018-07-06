@@ -68,12 +68,12 @@
                     #NDT: Nombre del dato de trabajo
                 --->
                             <textarea maxlength="240" type="text" class="form-control mb-3" placeholder="Dato del trabajo1" Name="NDT1" id="NDT1" required></textarea>
-                            <!--MAQUETACION DE IDEA
-                            <textarea id="DelNDT2" name="NDT2"></textarea>
-                            <textarea id="DelNDT3" name="NDT3"></textarea>
-                            <textarea id="DelNDT4" name="NDT4"></textarea>
-                            <textarea id="DelNDT5" name="NDT5"></textarea>
-                            -->
+                            <!--MAQUETACION DE IDEA-->
+                            <textarea id="delDT2" class="d-none" name="NDT2"></textarea>
+                            <textarea id="del3" class="d-none" name="NDT3"></textarea>
+                            <textarea id="del4" class="d-none" name="NDT4"></textarea>
+                            <textarea id="del5" class="d-none" name="NDT5"></textarea>
+                            
                         </div>
 
                         <div class="from-group mt-4">
@@ -82,12 +82,12 @@
                     #DT: Dato del trabajo
                 --->
                             <textarea maxlength="550" type="text" class="form-control mb-3" placeholder="Descripción1" Name="DT1" id="DT1" required></textarea>
-                            <!--MAQUETACION DE IDEA
-                            <textarea id="DelDT2" name="DT2"></textarea>
-                            <textarea id="DelDT3" name="DT3"></textarea>
-                            <textarea id="DelDT4" name="DT4"></textarea>
-                            <textarea id="DelDT5" name="DT5"></textarea>
-                            -->
+                            <!--MAQUETACION DE IDEA-->
+                            <textarea id="del2" class="d-none" name="DT2"></textarea>
+                            <textarea id="del3" class="d-none" name="DT3"></textarea>
+                            <textarea id="del4" class="d-none" name="DT4"></textarea>
+                            <textarea id="del5" class="d-none" name="DT5"></textarea>
+                            
                         </div>
                     </div>
                     <div id="Despues"></div>
@@ -105,11 +105,10 @@
                 #BS: Boton safe
             --->
                         <textarea maxlength="210" type="text" class="ia1 form-control mb-3" placeholder="Información Adicional" Name="IA1" required></textarea>
-                        <!--MAQUETACION DE IDEA
-                        <textarea id="DelIA2" name="IA2"></textarea>
-                        <textarea id="DelIA3" name="IA3"></textarea>
-                        <textarea id="DelIA4" name="IA4"></textarea>
-                        --> 
+                        <!--Textareas ocultos envían información en blanco--> 
+                        <textarea id="DelIA2" class="d-none" name="IA2"></textarea>
+                        <textarea id="DelIA3" class="d-none" name="IA3"></textarea>
+                        
                         
                     </div>
 
