@@ -287,6 +287,6 @@ $Moneda = $_POST["Moneda"];
             <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}{$Moneda}"?></span></h2>
         </div>
     </footer>
-    <script src="js/recoleccion.js"></script>
+    
     <script type="text/javascript" src="js/impresion.js"></script>
 </body>

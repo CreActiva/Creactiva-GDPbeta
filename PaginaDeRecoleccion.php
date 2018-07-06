@@ -150,6 +150,8 @@
                     </div>
 
                     <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickear para generar presupuesto">
+                    
+                    <?php $ContInfo = '<script>document.write(contInfo)</script>'?>
                 </form>
             </div>
 
@@ -157,12 +159,8 @@
         </div>
     </div>
 
-
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js">
-
-
-    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/recoleccion.js"></script>
 </body>
 
