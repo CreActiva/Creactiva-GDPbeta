@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <script src="js/jquery-3.3.1.min.js"></script>
 <?php
 
 $Fecha = $_POST["Fecha"];
@@ -23,50 +24,50 @@ $NombreDatoTrabajo = array($_POST["NDT1"],$_POST["NDT2"],$_POST["NDT3"],$_POST["
 $DatoTrabajo = array($_POST["DT1"],$_POST["DT2"],$_POST["DT3"],$_POST["DT4"],$_POST["DT5"]);    
 $InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"]);
 
-if (isset($NombreDatoTrabajo[1]) == (false)) {
-    $NombreDatoTrabajo[1] =" ";
-    $DatoTrabajo[1] =" ";
-    $NombreDatoTrabajo[2] =" ";
-    $DatoTrabajo[2] =" ";
-    $NombreDatoTrabajo[3] =" ";
-    $DatoTrabajo[3] =" ";
-    $NombreDatoTrabajo[4] =" ";
-    $DatoTrabajo[4] =" ";
+if (($NombreDatoTrabajo[1]) == '') {
+    $NombreDatoTrabajo[1] ="<script>$('.D1').remove();</script>";
+    $DatoTrabajo[1] ="<script>$('.D1').remove();</script>";
+    $NombreDatoTrabajo[2] ="<script>$('.D2').remove();</script>";
+    $DatoTrabajo[2] ="<script>$('.D2').remove();</script>";
+    $NombreDatoTrabajo[3] ="<script>$('.D3').remove();</script>";
+    $DatoTrabajo[3] ="<script>$('.D3').remove();</script>";
+    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
+    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
 }
     
-if (isset($NombreDatoTrabajo[2]) == (false)) {
-    $NombreDatoTrabajo[2] =" ";
-    $DatoTrabajo[2] =" ";
-    $NombreDatoTrabajo[3] =" ";
-    $DatoTrabajo[3] =" ";
-    $NombreDatoTrabajo[4] =" ";
-    $DatoTrabajo[4] =" ";
+elseif (($NombreDatoTrabajo[2]) == '') {
+    $NombreDatoTrabajo[2] ="<script>$('.D2').remove();</script>";
+    $DatoTrabajo[2] ="<script>$('.D2').remove();</script>";
+    $NombreDatoTrabajo[3] ="<script>$('.D3').remove();</script>";
+    $DatoTrabajo[3] ="<script>$('.D3').remove();</script>";
+    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
+    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
 }
 
-if (isset($NombreDatoTrabajo[3]) == (false)) {
-    $NombreDatoTrabajo[3] =" ";
-    $DatoTrabajo[3] =" ";
-    $NombreDatoTrabajo[4] =" ";
-    $DatoTrabajo[4] =" ";
+elseif (($NombreDatoTrabajo[3]) == '') {
+    $NombreDatoTrabajo[3] ="<script>$('.D3').remove();</script>";
+    $DatoTrabajo[3] ="<script>$('.D3').remove();</script>";
+    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
+    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
 }
     
-if (isset($NombreDatoTrabajo[4]) == (false)) {
-    $NombreDatoTrabajo[4] =" ";
-    $DatoTrabajo[4] =" ";
+elseif (($NombreDatoTrabajo[4]) == '') {
+    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
+    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
 }
 
-if (isset($InfoAdicional[1]) == (false)) {
-    $InfoAdicional[1] =" ";
+elseif (($InfoAdicional[1]) == '') {
+    $InfoAdicional[1] ="";
     $InfoAdicional[2] =" ";
     $InfoAdicional[3] =" ";
 }
 
-if (isset($InfoAdicional[2]) == (false)) {
+elseif (($InfoAdicional[2]) == '') {
     $InfoAdicional[2] =" ";
     $InfoAdicional[3] =" ";
 }
 
-if (isset($InfoAdicional[3]) == (false)) {
+elseif (($InfoAdicional[3]) == '') {
     $InfoAdicional[3] =" ";
 }
 
@@ -179,7 +180,7 @@ $Moneda = $_POST["Moneda"];
             <div id="S"></div>
         </div>
 
-        <div id="DC">
+        <div id="DC" class="D1">
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
@@ -197,7 +198,7 @@ $Moneda = $_POST["Moneda"];
             <div id="S"></div>
         </div>
 
-        <div id="DC">
+        <div id="DC" class="D2">
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
@@ -215,7 +216,7 @@ $Moneda = $_POST["Moneda"];
             <div id="S"></div>
         </div>
 
-        <div id="DC">
+        <div id="DC" class="D3">
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
@@ -233,7 +234,7 @@ $Moneda = $_POST["Moneda"];
             <div id="S"></div>
         </div>
 
-        <div id="DC">
+        <div id="DC" class="D4">
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
@@ -249,9 +250,6 @@ $Moneda = $_POST["Moneda"];
             </div>
             <div id="S"></div>
         </div>
-
-
-
     </content>
 
     <!--
@@ -288,5 +286,6 @@ $Moneda = $_POST["Moneda"];
         </div>
     </footer>
     
-    <script type="text/javascript" src="js/impresion.js"></script>
+    <script type="text/javascript" src="js/impresion.js">
+    </script>
 </body>

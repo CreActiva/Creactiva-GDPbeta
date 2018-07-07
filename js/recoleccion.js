@@ -61,10 +61,13 @@ var contMasInfo = 1;
 $(document).ready(function () {
     $("#MasDatos").click(function () {
         if (contMasInfo <= 4) {
+            contMasInfo++;
             var $NDT = $('textarea[id ^= "NDT"]:last');
             var $DT = $('textarea[id ^= "DT"]:last');
-
-            $('')
+            
+            $('#delNDT' + contMasInfo).remove();
+            $('#delDT' + contMasInfo).remove();
+            
             var NUM = parseInt($NDT.prop("id").match(/\d/g)) + 1;
 
             var $ClonarNDT = $NDT.clone().attr({
@@ -79,9 +82,8 @@ $(document).ready(function () {
                 placeholder: 'Descripción' + NUM
             }).val('');
 
-            $NDT.after($ClonarNDT.text(''));
-            $DT.after($ClonarDT.text(''));
-            contMasInfo++;
+            $NDT.after($ClonarNDT);
+            $DT.after($ClonarDT);
         } else {
             alert("Límite excedido");
         }
@@ -91,12 +93,27 @@ $(document).ready(function () {
         if (contMasInfo > 1) {
             $('textarea[id ^= "NDT"]:last').remove();
             $('textarea[id ^= "DT"]:last').remove();
+            
+            var ClonardelNDT =  $('textarea[name ^= "NDT"]:last').clone().attr({
+                name: 'NDT' + contMasInfo,
+                id: 'delNDT' + contMasInfo,
+                class: 'd-none'
+            }).val('');
+            var ClonardelDT =  $('textarea[name ^= "DT"]:last').clone().attr({
+                name: 'DT' + contMasInfo ,
+                id: 'delDT' + contMasInfo,
+                class: 'd-none'
+            }).val('');
+            
+            $('textarea[id ^= "NDT"]:last').after(ClonardelNDT);
+            $('textarea[id ^= "DT"]:last').after(ClonardelDT);
             contMasInfo--;
         } else {
             alert('Límite de reducción excedido');
         }
     });
 });
+
 
 /*Limitador de caracteres en input numérico*/
 function Contar() {
