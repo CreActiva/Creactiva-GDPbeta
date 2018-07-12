@@ -15,65 +15,36 @@
 <body>
     <script src="js/jquery-3.3.1.min.js"></script>
 <?php
+#Contadores de número de campos de información
+$ContD=$_POST['contDatos'];
+$ContI=$_POST['contInfo'];
 
+    
 $Fecha = $_POST["Fecha"];
 $NombreCliente = $_POST["NC"];
 $NombreProyecto = $_POST["NP"];
 
-$NombreDatoTrabajo = array($_POST["NDT1"],$_POST["NDT2"],$_POST["NDT3"],$_POST["NDT4"],$_POST["NDT5"]);
-$DatoTrabajo = array($_POST["DT1"],$_POST["DT2"],$_POST["DT3"],$_POST["DT4"],$_POST["DT5"]);    
-$InfoAdicional = array($_POST["IA1"],$_POST["IA2"],$_POST["IA3"]);
 
-if (($NombreDatoTrabajo[1]) == '') {
-    $NombreDatoTrabajo[1] ="<script>$('.D1').remove();</script>";
-    $DatoTrabajo[1] ="<script>$('.D1').remove();</script>";
-    $NombreDatoTrabajo[2] ="<script>$('.D2').remove();</script>";
-    $DatoTrabajo[2] ="<script>$('.D2').remove();</script>";
-    $NombreDatoTrabajo[3] ="<script>$('.D3').remove();</script>";
-    $DatoTrabajo[3] ="<script>$('.D3').remove();</script>";
-    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-}
+$DatoTrabajo = array($ContD);    
+$NombreDatoTrabajo = array($ContD);
+$InfoAdicional = array($ContI);     
     
-elseif (($NombreDatoTrabajo[2]) == '') {
-    $NombreDatoTrabajo[2] ="<script>$('.D2').remove();</script>";
-    $DatoTrabajo[2] ="<script>$('.D2').remove();</script>";
-    $NombreDatoTrabajo[3] ="<script>$('.D3').remove();</script>";
-    $DatoTrabajo[3] ="<script>$('.D3').remove();</script>";
-    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-}
-
-elseif (($NombreDatoTrabajo[3]) == '') {
-    $NombreDatoTrabajo[3] ="<script>$('.D3').remove();</script>";
-    $DatoTrabajo[3] ="<script>$('.D3').remove();</script>";
-    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-}
-    
-elseif (($NombreDatoTrabajo[4]) == '') {
-    $NombreDatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-    $DatoTrabajo[4] ="<script>$('.D4').remove();</script>";
-}
-
-elseif (($InfoAdicional[1]) == '') {
-    $InfoAdicional[1] ="";
-    $InfoAdicional[2] =" ";
-    $InfoAdicional[3] =" ";
-}
-
-elseif (($InfoAdicional[2]) == '') {
-    $InfoAdicional[2] =" ";
-    $InfoAdicional[3] =" ";
-}
-
-elseif (($InfoAdicional[3]) == '') {
-    $InfoAdicional[3] =" ";
-}
-
 $BalanceTotal = $_POST["BT"];
 $Moneda = $_POST["Moneda"];
+    
+settype($ContD,"integer");
+settype($ContI,"integer");
+    
+for ($i = 0; $i < $ContD; $i++) {
+    $a = $i + 1;
+    $NombreDatoTrabajo[$i] = $_POST['NDT'.$a];
+    $DatoTrabajo[$i] = $_POST['DT'.$a];
+}
 
+for ($i = 0; $i < $ContI; $i++) {
+    $a = $i + 1;
+    $InfoAdicional[$i] = $_POST['IA'.$a];
+}
 ?>
     <!--
         El header se divide en tres partes:
