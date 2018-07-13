@@ -27,11 +27,12 @@ $(document).ready(function () {
         }
     });
     
+/**********Duplicador de textarea "Información adicional"**********/
     $("#MasInformacion").click(function () {
         if ((contInfo >= 1) && (contInfo <= 10)) {
             contInfo++;
             var INFO = '<textarea maxlength="210" type="text" class="ia' + contInfo + ' form-control mb-3" placeholder="Información Adicional" Name="IA' + contInfo + '" required></textarea>';
-            $('textarea[class ^= "ia"]:last').after(INFO).val('');
+            $('textarea[class ^= "ia"]:last').after(INFO);
             $('.C2').val(contInfo);
         } else {
             alert('Límite excedido');
@@ -42,12 +43,14 @@ $(document).ready(function () {
         if (contInfo > 1) {
             $('textarea[class ^= "ia"]:last').remove();
             contInfo--;
+            /*Dando Valor a inputs para obtener variable JS como variable PHP*/
             $('.C2').val(contInfo);
         } else {
             alert('Límite de reducción excedido');
         }
     });
     
+/**********Limitador de caracteres en input numérico**********/
     function Contar() {
         var max = 15;
         var cadena = document.getElementById("BT").value;
@@ -61,6 +64,3 @@ $(document).ready(function () {
         }
     }
 });
-/**********Duplicador de textarea "Información adicional"**********/
-/**********Limitador de caracteres en input numérico**********/
-/*Dando Valor a inputs para obtener variable JS como variable PHP*/

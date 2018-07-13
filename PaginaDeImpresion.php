@@ -13,40 +13,39 @@
 </head>
 
 <body>
-    <script src="js/jquery-3.3.1.min.js"></script>
-<?php
-#Contadores de número de campos de información
-$ContD=$_POST['contDatos'];
-$ContI=$_POST['contInfo'];
-
-    
-$Fecha = $_POST["Fecha"];
-$NombreCliente = $_POST["NC"];
-$NombreProyecto = $_POST["NP"];
+    <?php
+    #Contadores de número de campos de información
+    $ContD=$_POST['contDatos'];
+    $ContI=$_POST['contInfo'];
 
 
-$DatoTrabajo = array($ContD);    
-$NombreDatoTrabajo = array($ContD);
-$InfoAdicional = array($ContI);     
-    
-$BalanceTotal = $_POST["BT"];
-$Moneda = $_POST["Moneda"];
-    
-settype($ContD,"integer");
-settype($ContI,"integer");
-    
-for ($i = 0; $i < $ContD; $i++) {
-    $a = $i + 1;
-    $NombreDatoTrabajo[$i] = $_POST['NDT'.$a];
-    $DatoTrabajo[$i] = $_POST['DT'.$a];
-}
+    $Fecha = $_POST["Fecha"];
+    $NombreCliente = $_POST["NC"];
+    $NombreProyecto = $_POST["NP"];
 
-for ($i = 0; $i < $ContI; $i++) {
-    $a = $i + 1;
-    $InfoAdicional[$i] = $_POST['IA'.$a];
-}
-?>
-    <!--
+
+    $DatoTrabajo = array($ContD);    
+    $NombreDatoTrabajo = array($ContD);
+    $InfoAdicional = array($ContI);     
+
+    $BalanceTotal = $_POST["BT"];
+    $Moneda = $_POST["Moneda"];
+
+    settype($ContD,"integer");
+    settype($ContI,"integer");
+
+    for ($i = 0; $i < $ContD; $i++) {
+        $a = $i + 1;
+        $NombreDatoTrabajo[$i] = $_POST['NDT'.$a];
+        $DatoTrabajo[$i] = $_POST['DT'.$a];
+    }
+
+    for ($i = 0; $i < $ContI; $i++) {
+        $a = $i + 1;
+        $InfoAdicional[$i] = $_POST['IA'.$a];
+    }
+    ?>
+        <!--
         El header se divide en tres partes:
         • #CodBar: Código de barra.
         • #Tit: Título.
@@ -133,7 +132,7 @@ for ($i = 0; $i < $ContI; $i++) {
             <div id="S"></div>
         </div>
 
-        <div id="DC">
+        <div id="DC" class="DC1">
            <div id="S"></div>
             <div id="NDT">
                 <div id="C">
@@ -150,77 +149,6 @@ for ($i = 0; $i < $ContI; $i++) {
             </div>
             <div id="S"></div>
         </div>
-
-        <div id="DC" class="D1">
-           <div id="S"></div>
-            <div id="NDT">
-                <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[1]}"?></h2>
-                </div>
-            </div>
-
-
-            <div id="DT">
-                <div id="C">
-                    <h2><?php echo"{$DatoTrabajo[1]}"?>
-                    </h2>
-                </div>
-            </div>
-            <div id="S"></div>
-        </div>
-
-        <div id="DC" class="D2">
-           <div id="S"></div>
-            <div id="NDT">
-                <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[2]}"?></h2>
-                </div>
-            </div>
-
-
-            <div id="DT">
-                <div id="C">
-                    <h2><?php echo"{$DatoTrabajo[2]}"?>
-                    </h2>
-                </div>
-            </div>
-            <div id="S"></div>
-        </div>
-
-        <div id="DC" class="D3">
-           <div id="S"></div>
-            <div id="NDT">
-                <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[3]}"?></h2>
-                </div>
-            </div>
-
-
-            <div id="DT">
-                <div id="C">
-                    <h2><?php echo"{$DatoTrabajo[3]}"?>
-                    </h2>
-                </div>
-            </div>
-            <div id="S"></div>
-        </div>
-
-        <div id="DC" class="D4">
-           <div id="S"></div>
-            <div id="NDT">
-                <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[4]}"?></h2>
-                </div>
-            </div>
-
-
-            <div id="DT">
-                <div id="C">
-                    <h2><?php echo"{$DatoTrabajo[4]}"?> </h2>
-                </div>
-            </div>
-            <div id="S"></div>
-        </div>
     </content>
 
     <!--
@@ -230,7 +158,6 @@ for ($i = 0; $i < $ContI; $i++) {
         • #Mas: Leer Más.
         • #Bal: Balance total area.
     --->
-
     <footer>
         <div id="IA">
         <h3>Información Adicional</h3>
@@ -241,8 +168,6 @@ for ($i = 0; $i < $ContI; $i++) {
            --->
            <!--207 caracteres--->
             <li class="ia"><?php echo "{$InfoAdicional[0]}"?></li>
-            <li class="ia"><?php echo "{$InfoAdicional[1]}"?></li>
-            <li class="ia"><?php echo "{$InfoAdicional[2]}"?></li>
         </ul>
         </div>
         <div id="Mas">
@@ -257,6 +182,42 @@ for ($i = 0; $i < $ContI; $i++) {
         </div>
     </footer>
     
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){  
+            var contD = '<?php echo $ContD ?>';
+            var contI = '<?php echo $ContI ?>';
+            parseInt(contD);
+            parseInt(contI);
+            if (contD <= 5) {
+                for (i=1;i<=contD;i++){
+                    var a = i + 1;
+                    var x = '<?php $i= '<script> document.write(i);</script>'; settype($i,"integer"); echo"{$NombreDatoTrabajo[$i]}";?>';
+                    var y = '<?php echo "{$DatoTrabajo[$i]}"?>';
+                    var DataTabla = '<div id="DC" class="DC' + a + '"><div id="S"></div><div id="NDT"><div id="C"><h2><span class="N">Nombre: </span>' + x + '</h2></div></div><div id="DT"><div id="C"><h2>' + y + '</h2></div></div><div id="S"></div></div>';
+                    $('div[class ^= "DC"]:last').append(DataTabla);
+                }
+            }
+        });
+        
+                <div id="DC" class="DC1">
+           <div id="S"></div>
+            <div id="NDT">
+                <div id="C">
+                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[0]}"?></h2>
+                </div>
+            </div>
+
+
+            <div id="DT">
+                <div id="C">
+                    <h2><?php echo"{$DatoTrabajo[0]}"?>
+                    </h2>
+                </div>
+            </div>
+            <div id="S"></div>
+        </div>
+    </script>
     <script type="text/javascript" src="js/impresion.js">
     </script>
 </body>
