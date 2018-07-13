@@ -48,13 +48,12 @@ function setFecha {
 */
 
 //Este funcionó
-//var pdf = new jsPDF('portrait, mm, a4');
+var pdf = new jsPDF('portrait, mm, a4');
 
 
-//pdf.addHTML(document.body,function(){
-//    pdf.save('test.pdf');
-// then use this as a counter.
-//});
+pdf.addHTML(document.body,function(){
+    pdf.save('test.pdf');
+});
 
 //pdf.addPage();
 /** Se puede mejorar

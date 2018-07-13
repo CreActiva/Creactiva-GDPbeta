@@ -10,11 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Recoleccion.css">
 </head>
-
 <body>
-   <script> var variableJS = “contenido”; </script>
-   <?php 
-    $a="<script>document.write(variableJS)</script>"; ?>      
     <div class="container">
         <div class="row">
             <div class="col">
@@ -22,7 +18,7 @@
             </div>
             <div class="w-100"></div>
             <div class="col-12">
-                <form action="PaginaDeImpresion.php?<?php echo 'a='.$a; ?> "method="POST">
+                <form action="PaginaDeImpresion.php?" method="POST">
                     <div class="from-group mt-5">
                         <h3>Ingresar Fecha</h3>
                         <!--#Fecha--->
@@ -39,7 +35,6 @@
                         <input maxlength="95" type="text" class="form-control" placeholder="Nombre de proyecto" Name="NP" id="NP" required>
                     </div>
                     <h2 class="mt-5 text-primary">Ingrese datos del trabajo realizado</h2>
-
                     <!--#NDT: Nombre del dato de trabajo-->
                     <div class="form-row mt-4">
                         <div class="form-group col-md-4">
@@ -54,8 +49,6 @@
                         <button id="MasDatos" type="button" class="btn btn-outline-primary mr-1">Agregar más datos del trabajo</button>
                         <button id="MenosDatos" type="button" class="btn btn-outline-danger">Eliminar datos</button>
                     </div>
-
-
                     <div id="Informacion" class="from-group mt-4">
                         <h3>Introducir información adicional</h3>
                         <!--.ia: información adicional;--->
@@ -82,6 +75,10 @@
                             <label class="custom-control-label" for="Dolar">Dolar</label>
                         </div>
                     </div>
+                    <!--ContadoresOcultos-->
+                    <input type="text" class="C1 d-none" name="contDatos">
+                    <input type="text" class="C2 d-none" name="contInfo">
+                    
                     <input type="submit" class="btn btn-primary mt-4" name="submit" id="BS" value="Clickear para generar presupuesto">
                 </form>
             </div>
