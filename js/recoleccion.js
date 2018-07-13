@@ -57,3 +57,7 @@ function Contar() {
         document.getElementById("BT").value = cadena.substr(0, max);
     }
 }
+
+$('#form').submit(function(event){
+    event.preventDefault;
+});  

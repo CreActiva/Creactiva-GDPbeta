@@ -12,6 +12,9 @@
 </head>
 
 <body>
+   <script> var variableJS = “contenido”; </script>
+   <?php 
+    $a="<script>document.write(variableJS)</script>"; ?>      
     <div class="container">
         <div class="row">
             <div class="col">
@@ -19,7 +22,7 @@
             </div>
             <div class="w-100"></div>
             <div class="col-12">
-                <form action="PaginaDeImpresion.php" method="POST">
+                <form action="PaginaDeImpresion.php?<?php echo 'a='.$a; ?> "method="POST">
                     <div class="from-group mt-5">
                         <h3>Ingresar Fecha</h3>
                         <!--#Fecha--->
@@ -84,6 +87,7 @@
             </div>
         </div>
     </div>
+   
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/recoleccion.js"></script>

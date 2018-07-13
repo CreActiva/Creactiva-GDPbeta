@@ -15,7 +15,8 @@
 <body>
     <script src="js/jquery-3.3.1.min.js"></script>
 <?php
-
+$a=$_GET['a'];
+echo $a;
 $Fecha = $_POST["Fecha"];
 $NombreCliente = $_POST["NC"];
 $NombreProyecto = $_POST["NP"];
