@@ -47,7 +47,7 @@ $(document).ready(function () {
             alert('Límite de reducción excedido');
         }
     });
-    
+/**********Limitador de caracteres en input numérico**********/
     function Contar() {
         var max = 15;
         var cadena = document.getElementById("BT").value;
@@ -61,25 +61,3 @@ $(document).ready(function () {
         }
     }
 });
-/**********Duplicador de textarea "Información adicional"**********/
-/**********Limitador de caracteres en input numérico**********/
-<<<<<<< HEAD
-function Contar() {
-    var max = 15;
-    var cadena = document.getElementById("BT").value;
-    var i = cadena.length;
-    if (i <= max) {
-        //Contador retro de caracteres
-        //document.getElementById("Cont").value = max - i;
-        //
-    } else {
-        document.getElementById("BT").value = cadena.substr(0, max);
-    }
-}
-
-$('#form').submit(function(event){
-    event.preventDefault;
-});  
-=======
-/*Dando Valor a inputs para obtener variable JS como variable PHP*/
->>>>>>> 7daa4ebc487007e985fbda001b5da301a8121621
