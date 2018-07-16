@@ -56,17 +56,26 @@
         <div id="ConSide">
 
             <div id="C1">
-                <aside><img src="image/tlf.png" alt="" style="width: 7%;"></aside><p>+58-0414-155-74-01</p>
+                <aside><img src="image/tlf.png" alt="" style="width: 8%;"></aside>
+                <div class="m">
+                <p>+58-0414-155-74-01</p>
+                </div>
 
             </div>
 
             <div id="C2">
-                <aside><img src="image/mundo.png" alt="" style="width: 12%;"></aside>
+                <aside><img src="image/mundo.png" alt="" style="width: 13%;"></aside>
+                <div class="m">
+                    
                 <p>https://soycreactivo.com/</p>
+                </div>
             </div>
             <div id="Mail">
-                <aside><img src="image/buzon.png" alt="" style="width: 16%;"></aside>
+                <aside><img src="image/buzon.png" alt="" style="width: 15%; margin:3px 0;"></aside>
+                <div class="m">
+                    
                 <p>proyectoscreactiva@gmail.com</p>
+                </div>
             </div>
 
         </div>

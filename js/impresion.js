@@ -1,9 +1,3 @@
-var DataInfo = '<li class="ia"><?php echo "{$InfoAdicional[2]}"?></li>';
-  
-
-
-        //volviendo varibles de tipo string a numericas
-
 //Imprimir
 var pdf = new jsPDF('portrait, mm, a4');
 
