@@ -131,21 +131,23 @@
         --->
     </content>
     <footer>
-        <div id="IA">
-        <h3>Información Adicional</h3>
-        <!--6 listas desordenadas--->
-        <ul>
-           <!--
-           ia = información adicional 
-           --->
-           <!--207 caracteres--->
-            <?php 
-                for ($i=0;$i<$ContI;$i++) {
-                    echo '<li class="ia">'.$InfoAdicional[$i].'</li>';
-                }
-            ?>
-        </ul>
-        </div>
+       <div class="container">      
+            <div id="IA">
+            <h3>Información Adicional</h3>
+            <!--6 listas desordenadas--->
+            <ul>
+               <!--
+               ia = información adicional 
+               --->
+               <!--207 caracteres--->
+                <?php 
+                    for ($i=0;$i<$ContI;$i++) {
+                        echo '<li class="ia">'.$InfoAdicional[$i].'</li>';
+                    }
+                ?>
+            </ul>
+            </div>
+       </div>
         <div id="Mas">
             <p>Puedes contactarnos a través de <span class="N">proyectoscreactiva@gmail.com</span></p>
         </div>

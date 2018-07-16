@@ -130,7 +130,11 @@ content {
     display: block;
     position: relative;
     /*height: 718px;*/
-    height: 1550px;
+    /*height: 1550px;1*/
+    /*1350px*/
+    /*height: 1500px;2*/
+    /*height: 1550px;*/
+    height: 1450px;
 }
 
 /**/
@@ -244,7 +248,26 @@ content {
 
 /**/
 
+/**/
+
+/************************************/
+
+/******************Footer Area Styles******************/
+
+/*Elemento Padre Estilos*/
+
+footer {
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 366px;
+}
+
+/**/
 /*Información Adicional*/
+.container {
+    height: 266px;
+}
 #IA {
     padding: 40px;
 }
@@ -265,22 +288,6 @@ li {
     text-align: justify;
     font-size: 22px;
 }
-/**/
-
-/************************************/
-
-/******************Footer Area Styles******************/
-
-/*Elemento Padre Estilos*/
-
-footer {
-    width: 100%;
-    display: block;
-    position: relative;
-    height: 100px;
-}
-
-/**/
 
 /*Area de Contáctanos*/
 
