@@ -5,11 +5,11 @@ var DataInfo = '<li class="ia"><?php echo "{$InfoAdicional[2]}"?></li>';
         //volviendo varibles de tipo string a numericas
 
 //Imprimir
-//var pdf = new jsPDF('portrait, mm, a4');
+var pdf = new jsPDF('portrait, mm, a4');
 
-//pdf.addHTML(document.body,function(){
-//    pdf.save('test.pdf');
-//});
+pdf.addHTML(document.body,function(){
+    pdf.save('test.pdf');
+});
 
 //pdf.addPage();
 /** Se puede mejorar

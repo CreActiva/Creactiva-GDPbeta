@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('.C2').val(contInfo);
     
     $("#MasDatos").click(function() {
-        if ((contDatos >= 1 && contDatos < 10)){
+        if ((contDatos >= 1 && contDatos < 11)){
             contDatos++;
             var NDATO = '<textarea maxlength="240" type="text" class="ndt' + contDatos + ' form-control mb-2" placeholder="Dato del trabajo' + contDatos + '" Name="NDT' + contDatos + '" required></textarea>';
             var DATO = '<textarea maxlength="550" type="text" class="dt'+ contDatos + ' form-control mb-2" placeholder="Descripción'+ contDatos + '" Name="DT'+ contDatos + '" required></textarea>';
@@ -29,7 +29,7 @@ $(document).ready(function () {
     
 /**********Duplicador de textarea "Información adicional"**********/
     $("#MasInformacion").click(function () {
-        if ((contInfo >= 1) && (contInfo <= 10)) {
+        if ((contInfo >= 1) && (contInfo < 11)) {
             contInfo++;
             var INFO = '<textarea maxlength="210" type="text" class="ia' + contInfo + ' form-control mb-3" placeholder="Información Adicional" Name="IA' + contInfo + '" required></textarea>';
             $('textarea[class ^= "ia"]:last').after(INFO);

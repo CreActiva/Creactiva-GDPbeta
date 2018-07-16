@@ -11,47 +11,37 @@
     <script type="text/javascript" src="js/jspdf.debug.js"></script>
 
 </head>
-
 <body>
     <?php
     #Contadores de número de campos de información
     $ContD=$_POST['contDatos'];
     $ContI=$_POST['contInfo'];
-
-
     $Fecha = $_POST["Fecha"];
     $NombreCliente = $_POST["NC"];
     $NombreProyecto = $_POST["NP"];
-
-
     $DatoTrabajo = array($ContD);    
     $NombreDatoTrabajo = array($ContD);
     $InfoAdicional = array($ContI);     
-
     $BalanceTotal = $_POST["BT"];
     $Moneda = $_POST["Moneda"];
-
     settype($ContD,"integer");
     settype($ContI,"integer");
-
     for ($i = 0; $i < $ContD; $i++) {
         $a = $i + 1;
         $NombreDatoTrabajo[$i] = $_POST['NDT'.$a];
         $DatoTrabajo[$i] = $_POST['DT'.$a];
     }
-
     for ($i = 0; $i < $ContI; $i++) {
         $a = $i + 1;
         $InfoAdicional[$i] = $_POST['IA'.$a];
     }
     ?>
-        <!--
-        El header se divide en tres partes:
-        • #CodBar: Código de barra.
-        • #Tit: Título.
-        • #ConSide: Zona de Contacto.
+    <!--
+    El header se divide en tres partes:
+    • #CodBar: Código de barra.
+    • #Tit: Título.
+    • #ConSide: Zona de Contacto.
     --->
-
     <header>
         <div id="CodBar">
             <aside id="img"><img src="image/220px-EAN13.png" alt="Codigo de Barras" class="img1"></aside>
@@ -83,9 +73,9 @@
     </header>
 
     <!--
-        El content contiene estos elementos:
-        • IC: Información del cliente
-        • DC: Data central TABLA
+    El content contiene estos elementos:
+    • IC: Información del cliente
+    • DC: Data central TABLA
     --->
 
     <content>
@@ -106,10 +96,8 @@
                     <aside><img src="image/CreActivaLogo.png" alt="LogoCreactiva"></aside>
                 </div>
         </div>
-
-
         <!--
-            Data Central Area
+        Data Central Area
         -->
         <!--
         #S = Separador /*width*/
@@ -122,8 +110,6 @@
                     <h2 class="N">Nombre de Trabajo</h2>
                 </div>
             </div>
-
-
             <div id="TitleT2">
                 <div id="C">
                     <h2 class="N">Descripción de Trabajo</h2>
@@ -131,33 +117,19 @@
             </div>
             <div id="S"></div>
         </div>
-
-        <div id="DC" class="DC1">
-           <div id="S"></div>
-            <div id="NDT">
-                <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[0]}"?></h2>
-                </div>
-            </div>
-
-
-            <div id="DT">
-                <div id="C">
-                    <h2><?php echo"{$DatoTrabajo[0]}"?>
-                    </h2>
-                </div>
-            </div>
-            <div id="S"></div>
-        </div>
-    </content>
-
-    <!--
+       <?php 
+        for ($i=0;$i<$ContD;$i++) {
+             echo '<div id="DC" class="DC'.$i.'"><div id="S"></div><div id="NDT"><div id="C"><h2><span class="N">Nombre: </span>'.$NombreDatoTrabajo[$i].'</h2></div></div><div id="DT"><div id="C"><h2>'.$DatoTrabajo[$i].'</h2></div></div><div id="S"></div></div>';
+        }
+        ?>
+        <!--    
         El footer se divide en tres partes:
         • #IA: Información Adicional.
         • .ia.
         • #Mas: Leer Más.
         • #Bal: Balance total area.
-    --->
+        --->
+    </content>
     <footer>
         <div id="IA">
         <h3>Información Adicional</h3>
@@ -167,7 +139,11 @@
            ia = información adicional 
            --->
            <!--207 caracteres--->
-            <li class="ia"><?php echo "{$InfoAdicional[0]}"?></li>
+            <?php 
+                for ($i=0;$i<$ContI;$i++) {
+                    echo '<li class="ia">'.$InfoAdicional[$i].'</li>';
+                }
+            ?>
         </ul>
         </div>
         <div id="Mas">
@@ -176,48 +152,11 @@
         <!---
            BT = Balance total
         --->
-          
         <div id="Bal">
             <h2>Balance Total: <span class="BT"><?php echo "{$BalanceTotal}{$Moneda}"?></span></h2>
         </div>
     </footer>
-    
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        $(document).ready(function(){  
-            var contD = '<?php echo $ContD ?>';
-            var contI = '<?php echo $ContI ?>';
-            parseInt(contD);
-            parseInt(contI);
-            if (contD <= 5) {
-                for (i=1;i<=contD;i++){
-                    var a = i + 1;
-                    var x = '<?php $i= '<script> document.write(i);</script>'; settype($i,"integer"); echo"{$NombreDatoTrabajo[$i]}";?>';
-                    var y = '<?php echo "{$DatoTrabajo[$i]}"?>';
-                    var DataTabla = '<div id="DC" class="DC' + a + '"><div id="S"></div><div id="NDT"><div id="C"><h2><span class="N">Nombre: </span>' + x + '</h2></div></div><div id="DT"><div id="C"><h2>' + y + '</h2></div></div><div id="S"></div></div>';
-                    $('div[class ^= "DC"]:last').append(DataTabla);
-                }
-            }
-        });
-        
-                <div id="DC" class="DC1">
-           <div id="S"></div>
-            <div id="NDT">
-                <div id="C">
-                    <h2><span class="N">Nombre: </span><?php echo"{$NombreDatoTrabajo[0]}"?></h2>
-                </div>
-            </div>
-
-
-            <div id="DT">
-                <div id="C">
-                    <h2><?php echo"{$DatoTrabajo[0]}"?>
-                    </h2>
-                </div>
-            </div>
-            <div id="S"></div>
-        </div>
-    </script>
     <script type="text/javascript" src="js/impresion.js">
     </script>
 </body>

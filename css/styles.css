@@ -10,10 +10,12 @@
 
 * {
     font-family: 'Helvetica', sans-serif;
+    /*color:#4f4f4f;*/
+    
 }
 /*Color Naranja Clase*/
 .N {
-    color:#d5845c;
+    color:#d56736;
 }
 
 /******************Header Area Styles******************/
@@ -128,7 +130,7 @@ content {
     display: block;
     position: relative;
     /*height: 718px;*/
-    height: 1340px;
+    height: 1550px;
 }
 
 /**/
@@ -297,7 +299,6 @@ footer {
 /**/
 
 /*Balance Area Styles*/
-
 #Bal {
     width: 40%;
     height: 100px;
@@ -315,40 +316,3 @@ footer {
     font-weight: bold;
 
 }
-
-
-/**/
-
-/************************************/
-
-/**
-Tabla styles
-table {
-    margin: 5px 65.5px 5px 65.5px;
-    float: left;
-}
-
-caption,
-th,
-td {
-    border-bottom: 1px solid #ddd;
-
-    padding: 12px;
-    text-align: justify;
-    font-size:22px;
-}
-
-td h4 {
-    font-size:22px;
-    display: inline;
-}
-
-.TitleTab {
-    color: #d4683a;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#Derecha { }
-
-**/
