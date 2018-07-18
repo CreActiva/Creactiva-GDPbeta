@@ -6,10 +6,10 @@ $(document).ready(function () {
     $('.C2').val(contInfo);
     
     $("#MasDatos").click(function() {
-        if ((contDatos >= 1 && contDatos < 11)){
+        if ((contDatos >= 1) && (contDatos < 32)){
             contDatos++;
-            var NDATO = '<textarea maxlength="240" type="text" class="ndt' + contDatos + ' form-control mb-2" placeholder="Dato del trabajo' + contDatos + '" Name="NDT' + contDatos + '" required></textarea>';
-            var DATO = '<textarea maxlength="550" type="text" class="dt'+ contDatos + ' form-control mb-2" placeholder="Descripción'+ contDatos + '" Name="DT'+ contDatos + '" required></textarea>';
+            var NDATO = '<textarea maxlength="190" type="text" class="ndt' + contDatos + ' form-control mb-2" placeholder="Dato del trabajo' + contDatos + '" Name="NDT' + contDatos + '" required></textarea>';
+            var DATO = '<textarea maxlength="530" type="text" class="dt'+ contDatos + ' form-control mb-2" placeholder="Descripción'+ contDatos + '" Name="DT'+ contDatos + '" required></textarea>';
             $('textarea[name ^= "NDT"]:last').after(NDATO);$('textarea[name ^= "DT"]:last').after(DATO);
             $('.C1').val(contDatos);
         } else {
@@ -31,7 +31,7 @@ $(document).ready(function () {
     $("#MasInformacion").click(function () {
         if ((contInfo >= 1) && (contInfo < 11)) {
             contInfo++;
-            var INFO = '<textarea maxlength="210" type="text" class="ia' + contInfo + ' form-control mb-3" placeholder="Información Adicional" Name="IA' + contInfo + '" required></textarea>';
+            var INFO = '<textarea maxlength="530" type="text" class="ia' + contInfo + ' form-control mb-3" placeholder="Información Adicional" Name="IA' + contInfo + '" required></textarea>';
             $('textarea[class ^= "ia"]:last').after(INFO);
             $('.C2').val(contInfo);
         } else {
@@ -49,18 +49,16 @@ $(document).ready(function () {
             alert('Límite de reducción excedido');
         }
     });
-    
+});
 /**********Limitador de caracteres en input numérico**********/
     function Contar() {
-        var max = 15;
+        var max = 13;
         var cadena = document.getElementById("BT").value;
         var i = cadena.length;
         if (i <= max) {
             //Contador retro de caracteres
             //document.getElementById("Cont").value = max - i;
-            //
         } else {
             document.getElementById("BT").value = cadena.substr(0, max);
         }
     }
-});

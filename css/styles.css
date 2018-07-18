@@ -11,8 +11,9 @@
 * {
     font-family: 'Helvetica', sans-serif;
     /*color:#4f4f4f;*/
-    
 }
+
+
 /*Color Naranja Clase*/
 .N {
     color:#d56736;
@@ -82,7 +83,7 @@ header {
     float: left;
     position: relative;
     box-sizing: content-box;
-    background: #d56736;
+    background-color: #d56736 !important;
     color: #ffffff;
     height: 100px;
     box-shadow: inset -1px -1px 10px rgba(0, 0, 0, 0.3215686274509804);
@@ -138,7 +139,9 @@ content {
     /*1350px*/
     /*height: 1500px;2*/
     /*height: 1550px;*/
-    height: 1450px;
+    /*1450*/
+    height: 1716px;
+    background-color:#fff;
 }
 
 /**/
@@ -194,7 +197,7 @@ content {
     width: 100%;
     position: relative;
     display: block;
-    height: 220px;
+    height: 185px;
     float: left;
     font-size: 22px;
     text-align: justify;
@@ -214,9 +217,10 @@ content {
     width: 30%;
     position: relative;
     display: block;
-    height: 220px;
+    height: 185px;
     float: left;
     border-bottom: solid 1px #4f4f4f;
+    text-align: left;
 }
 
 #TitleT2 {
@@ -233,7 +237,7 @@ content {
     width: 60%;
     position: relative;
     display: block;
-    height: 220px;
+    height: 185px;
     float: left;
     border-bottom: solid 1px #4f4f4f;
 }
@@ -244,7 +248,7 @@ content {
 #S {
     float: left;
     width:5%;
-    height: 220px;
+    height: 185px;
     position: relative;
     display: block;
 
@@ -264,14 +268,16 @@ footer {
     width: 100%;
     display: block;
     position: relative;
-    height: 366px;
+    height: 100px;
 }
 
 /**/
 /*Información Adicional*/
+/*
 .container {
     height: 266px;
 }
+*/
 #IA {
     padding: 40px;
 }
@@ -279,7 +285,7 @@ footer {
 #IA h3{
     padding: 0 0 20px 12px;
     font-size: 24px;
-    color:#d5845c;
+    color:#d56736;
     font-weight: bold;
 }
 
@@ -325,5 +331,18 @@ li {
     height: 16px;
     font-size: 20px;
     font-weight: bold;
+}
 
+.more0,.more1,.more2 {
+    background-color: #fff;
+    font-family: 'Helvetica', sans-serif; 
+    height: 1816px;/*header:100px;content:1716px;footer:100px*/
+}
+.container, .container1, .container2, .container3 {
+    background-color: #fff;
+}
+.info {
+    background-color: #fff;
+    font-family: 'Helvetica', sans-serif; 
+    height: 1916px;/*header:100px;content:1716px;footer:100px*/
 }
