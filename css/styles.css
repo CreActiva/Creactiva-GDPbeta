@@ -10,10 +10,13 @@
 
 * {
     font-family: 'Helvetica', sans-serif;
+    /*color:#4f4f4f;*/
 }
+
+
 /*Color Naranja Clase*/
 .N {
-    color:#d5845c;
+    color:#d56736;
 }
 
 /******************Header Area Styles******************/
@@ -80,7 +83,7 @@ header {
     float: left;
     position: relative;
     box-sizing: content-box;
-    background: #d56736;
+    background-color: #d56736 !important;
     color: #ffffff;
     height: 100px;
     box-shadow: inset -1px -1px 10px rgba(0, 0, 0, 0.3215686274509804);
@@ -94,13 +97,17 @@ aside{
 #ConSide #C1,
 #ConSide #C2 {
     float: left;
-    padding: 30px 5px;
+    padding: 30px 0px 30px 10px;
     display: block;
     width: 32%;
     height: 40px;
     position: relative;
 }
-
+.m {
+    display: inline-block;
+    position: absolute;
+    padding: 12px 5px;
+}
 
 #ConSide .ico {
     width: 10%;
@@ -128,7 +135,13 @@ content {
     display: block;
     position: relative;
     /*height: 718px;*/
-    height: 1340px;
+    /*height: 1550px;1*/
+    /*1350px*/
+    /*height: 1500px;2*/
+    /*height: 1550px;*/
+    /*1450*/
+    height: 1716px;
+    background-color:#fff;
 }
 
 /**/
@@ -184,7 +197,7 @@ content {
     width: 100%;
     position: relative;
     display: block;
-    height: 220px;
+    height: 185px;
     float: left;
     font-size: 22px;
     text-align: justify;
@@ -204,9 +217,10 @@ content {
     width: 30%;
     position: relative;
     display: block;
-    height: 220px;
+    height: 185px;
     float: left;
     border-bottom: solid 1px #4f4f4f;
+    text-align: left;
 }
 
 #TitleT2 {
@@ -223,7 +237,7 @@ content {
     width: 60%;
     position: relative;
     display: block;
-    height: 220px;
+    height: 185px;
     float: left;
     border-bottom: solid 1px #4f4f4f;
 }
@@ -234,7 +248,7 @@ content {
 #S {
     float: left;
     width:5%;
-    height: 220px;
+    height: 185px;
     position: relative;
     display: block;
 
@@ -242,27 +256,6 @@ content {
 
 /**/
 
-/*Información Adicional*/
-#IA {
-    padding: 40px;
-}
-
-#IA h3{
-    padding: 0 0 20px 12px;
-    font-size: 24px;
-    color:#d5845c;
-    font-weight: bold;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    padding: 10px;
-    text-align: justify;
-    font-size: 22px;
-}
 /**/
 
 /************************************/
@@ -279,6 +272,32 @@ footer {
 }
 
 /**/
+/*Información Adicional*/
+/*
+.container {
+    height: 266px;
+}
+*/
+#IA {
+    padding: 40px;
+}
+
+#IA h3{
+    padding: 0 0 20px 12px;
+    font-size: 24px;
+    color:#d56736;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+    text-align: justify;
+    font-size: 22px;
+}
 
 /*Area de Contáctanos*/
 
@@ -297,7 +316,6 @@ footer {
 /**/
 
 /*Balance Area Styles*/
-
 #Bal {
     width: 40%;
     height: 100px;
@@ -313,42 +331,18 @@ footer {
     height: 16px;
     font-size: 20px;
     font-weight: bold;
-
 }
 
-
-/**/
-
-/************************************/
-
-/**
-Tabla styles
-table {
-    margin: 5px 65.5px 5px 65.5px;
-    float: left;
+.more0,.more1,.more2 {
+    background-color: #fff;
+    font-family: 'Helvetica', sans-serif; 
+    height: 1816px;/*header:100px;content:1716px;footer:100px*/
 }
-
-caption,
-th,
-td {
-    border-bottom: 1px solid #ddd;
-
-    padding: 12px;
-    text-align: justify;
-    font-size:22px;
+.container, .container1, .container2, .container3 {
+    background-color: #fff;
 }
-
-td h4 {
-    font-size:22px;
-    display: inline;
+.info {
+    background-color: #fff;
+    font-family: 'Helvetica', sans-serif; 
+    height: 1916px;/*header:100px;content:1716px;footer:100px*/
 }
-
-.TitleTab {
-    color: #d4683a;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#Derecha { }
-
-**/
