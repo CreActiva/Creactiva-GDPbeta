@@ -19,17 +19,17 @@
                 <form action="PaginaDeImpresion.php?" method="POST">
                     <div class="from-group mt-5">
                         <h3>Ingresar fecha</h3>
-                        <!--#Fecha--->
+                        <!--#Fecha-->
                         <input maxlength="8" type="date" class="form-control-sm" name="Fecha" id="Fecha" required>
                     </div>
                     <div class="from-group mt-4">
                         <h3>Nombre de cliente</h3>
-                        <!--#NC: Nombre Del Cliente--->
+                        <!--#NC: Nombre Del Cliente-->
                         <input maxlength="95" type="text" class="form-control" placeholder="Nombre de cliente" Name="NC" id="NC " required>
                     </div>
                     <div class="from-group mt-4">
                         <h3>Nombre del proyecto</h3>
-                        <!--#NP:Nombre del Proyecto--->
+                        <!--#NP:Nombre del Proyecto-->
                         <input maxlength="95" type="text" class="form-control" placeholder="Nombre de proyecto" Name="NP" id="NP" required>
                     </div>
                     <h2 class="mt-5 text-primary">Ingrese datos del trabajo realizado</h2>
@@ -49,7 +49,7 @@
                     </div>
                     <div id="Informacion" class="from-group mt-4">
                         <h3>Información adicional</h3>
-                        <!--.ia: información adicional;--->
+                        <!--.ia: información adicional-->
                         <textarea maxlength="530" type="text" class="ia1 form-control mb-3" placeholder="Información adicional 1" Name="IA1" required></textarea>
                     </div>
                     <button id="MasInformacion" type="button" class="btn btn-outline-primary">Agregar información</button>
@@ -57,7 +57,7 @@
                     <div class="w-100"></div>
                     <div class="from-group mt-4">
                         <h3>Ingresar el balance total del presupuesto</h3>
-                        <!--BT: Balance Total--->
+                        <!--BT: Balance Total-->
                         <input max="10000000000000" type="number" class="form-control-sm mb-3" Name="BT" id="BT" onKeyDown="Contar()" onKeyUp="Contar()" required>
                         <h5>Moneda</h5>
                         <div class="custom-control custom-radio custom-control-inline">

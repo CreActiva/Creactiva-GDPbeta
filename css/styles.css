@@ -346,3 +346,30 @@ li {
     font-family: 'Helvetica', sans-serif; 
     height: 1916px;/*header:100px;content:1716px;footer:100px*/
 }
+
+.TerminosYCondiciones {
+    height: 500vh;
+    font-family: 'Helvetica', sans-serif; 
+    /*margin:40vh 10% 0 10%;*/
+    display: block;
+    background: #fff;
+
+}
+.TerminosYCondiciones div {
+    padding: 10px;
+    background: #fff;
+}
+.TerminosYCondiciones h2 {
+    margin-top:40px;
+    font-size: 26px;
+}
+.TerminosYCondiciones h3 {
+    font-size: 24px;
+}
+.TerminosYCondiciones p {
+    font-size: 18px;
+    text-align:justify;
+}
+.TC1,.TC2,.TC3,.TC4 {
+    margin:40vh 10% 0 10%;
+}
