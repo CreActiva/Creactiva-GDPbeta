@@ -61,12 +61,12 @@
                         <input max="10000000000000" type="number" class="form-control-sm mb-3" Name="BT" id="BT" onKeyDown="Contar()" onKeyUp="Contar()" required>
                         <h5>Moneda</h5>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="BsF" name="Moneda" class="custom-control-input" value="BsF" required>
-                            <label class="custom-control-label" for="BsF">BsF</label>
+                            <input type="radio" id="BsF" name="Moneda" class="custom-control-input" value="Bs.F." required>
+                            <label class="custom-control-label" for="BsF">Bs.F.</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="BsS" name="Moneda" class="custom-control-input" value="BsS" required>
-                            <label class="custom-control-label" for="BsS">BsS</label>
+                            <input type="radio" id="BsS" name="Moneda" class="custom-control-input" value="Bs.S." required>
+                            <label class="custom-control-label" for="BsS">Bs.S.</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" id="Dolar" name="Moneda" class="custom-control-input" value="$" required>
