@@ -370,6 +370,7 @@ li {
 .TerminosYCondiciones p {
     font-size: 18px;
     text-align:justify;
+    line-height: 1.5;
 }
 .TC1,.TC2,.TC3,.TC4 {
     padding:40vh 10% 0 10%;
