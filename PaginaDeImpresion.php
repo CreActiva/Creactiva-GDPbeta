@@ -21,6 +21,7 @@
     $InfoAdicional = array($ContI);
     $BalanceTotal = $_POST["BT"];
     $Moneda = $_POST["Moneda"];
+    $NumeroDePag;
     settype($ContD,"integer");
     settype($ContI,"integer");
     for ($i = 0; $i < $ContD; $i++) {
@@ -169,8 +170,7 @@
                 $x = 0;
                 echo '</div>';
                 echo '<script>document.querySelector(".more'.$x.'").style.display= "none";</script>';}
-            ?>
-    </div>
+            ?>'    </div>
 
     <div class="container2">
         <div class="more1">
@@ -413,9 +413,7 @@ $(document).ready(function() {
                 });
             });
         });
-    } else {
-        
-    }
+    } else {}
 });
 </script>
 </body>
