@@ -264,8 +264,6 @@
             <div>
                 <p>Una vez suscrito el acuerdo de voluntades o aceptado el contrato de servicios, significa que el “CLIENTE”, acepta cabalmente todas y cada una de las disposiciones descritas en el las CONDICIONES GENERALES, LAS CONDICIONES PARTICULARES y LAS POLITICAS DE PRIVACIDAD, así como EL CONTRATO DE ENCARGADO DE TRATAMIENTO,  en las versiones publicadas en el momento en que el “CLIENTE”, disfrute del “SERVICIO”.</p>
             </div>
-        </div>
-        <div class="TC2">
             <div>
                 <p>Igualmente, en el supuesto caso que la no conformidad por parte del “CLIENTE”, en cuanto a las modificaciones de las CONDICIONES GENERALES, CONDICIONES PARTICULARES, POLITICAS DE PRIVACIDAD, o en cuanto al CONTRATO DE ENCARGADO DE TRATAMIENTO, deberá notificarlo para rescindir el contrato. En todo caso, en una eventual variación de estos apartados deberá confirmar su aceptación para continuar disfrutando del “SERVICIO”.</p>
             </div>
@@ -293,7 +291,7 @@
                 <p>Es mayor de dieciocho años y no se encuentra inhabilitado para contratar.  Además, ha leído y acepta las CONDICIONES GENERALES Y LAS PARTICULARES, ASI COMO LAS POLITICAS DE PRIVACIDAD Y EL CONTRATO DE ENCARGADO DE TRATAMIENTO, sujeto a las Leyes que rigen la materia.</p>
             </div>
         </div>
-        <div class="TC3">
+        <div class="TC2">
             <div>
                 <h3>COSTO DEL SERVICIO Y MODALIDAD DE PAGO</h3>
             </div>
@@ -327,8 +325,6 @@
             <div>
                 <p>• Brindar por escrito al cliente los requerimientos mínimos de operatividad en cuanto a los sistemas y herramientas tecnológicas que debe adquirir “EL CLIENTE”, asumidos con fondos no imputables en el presupuesto ya que no forman parte del “SERVICIO”, pero que son esenciales para la ejecución del proyecto.</p>
             </div>
-        </div>
-        <div class="TC4">
             <div>
                 <h3>OBLIGACIONES DEL “CLIENTE”.</h3>
             </div>
@@ -349,7 +345,14 @@
             </div>
             <div>
                 <p>El Generador Presupuestario, se encuentra registrado a nombre de “LA EMPRESA”.  El “CLIENTE” no podrá utilizar el protocolo computarizado para disponer de este Generador Presupuestario para efectuar cálculos ajenos a la “EMPRESA”.</p>
+            </div>    
             </div>
+        </div>
+        <div class="TC3">
+            
+        </div>
+        <div class="TC4">
+            
         </div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/impresion.js"></script>
@@ -366,13 +369,7 @@ $(document).ready(function() {
                 pdf.addHTML($('.TC1'), function(){
                     pdf.addPage();
                     pdf.addHTML($('.TC2'),function(){
-                        pdf.addPage();
-                        pdf.addHTML($('.TC3'),function(){
-                            pdf.addPage();
-                            pdf.addHTML($('.TC4'),function(){
-                                pdf.save('x.pdf');
-                            });
-                        });
+                       pdf.save('Presupuesto.pdf');
                     });
                 });
 
@@ -387,13 +384,7 @@ $(document).ready(function() {
             pdf.addHTML($('.TC1'), function(){
                 pdf.addPage();
                 pdf.addHTML($('.TC2'),function(){
-                    pdf.addPage();
-                    pdf.addHTML($('.TC3'),function(){
-                        pdf.addPage();
-                        pdf.addHTML($('.TC4'),function(){
-                            pdf.save('x.pdf');
-                        });
-                    });
+                    pdf.save('Presupuesto.pdf');
                 });
             });
 
@@ -409,13 +400,7 @@ $(document).ready(function() {
                     pdf.addHTML($('.TC1'), function(){
                         pdf.addPage();
                         pdf.addHTML($('.TC2'),function(){
-                            pdf.addPage();
-                            pdf.addHTML($('.TC3'),function(){
-                                pdf.addPage();
-                                pdf.addHTML($('.TC4'),function(){
-                                    pdf.save('x.pdf');
-                                });
-                            });
+                            pdf.save('Presupuesto.pdf');
                         });
                     });
                 });
@@ -433,13 +418,7 @@ $(document).ready(function() {
                         pdf.addHTML($('.TC1'), function(){
                             pdf.addPage();
                             pdf.addHTML($('.TC2'),function(){
-                                pdf.addPage();
-                                pdf.addHTML($('.TC3'),function(){
-                                    pdf.addPage();
-                                    pdf.addHTML($('.TC4'),function(){
-                                        pdf.save('x.pdf');
-                                    });
-                                });
+                                pdf.save('Presupuesto.pdf');
                             });
                         });
                     });

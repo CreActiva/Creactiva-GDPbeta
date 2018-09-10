@@ -356,7 +356,7 @@ li {
 
 }
 .TerminosYCondiciones div {
-    padding: 10px;
+    padding: 10px 5%;
     background: #fff;
 }
 .TerminosYCondiciones h2 {
@@ -364,6 +364,7 @@ li {
     font-size: 26px;
 }
 .TerminosYCondiciones h3 {
+    margin-top:20px;
     font-size: 24px;
 }
 .TerminosYCondiciones p {
@@ -371,5 +372,5 @@ li {
     text-align:justify;
 }
 .TC1,.TC2,.TC3,.TC4 {
-    margin:40vh 10% 0 10%;
+    padding:40vh 10% 0 10%;
 }
